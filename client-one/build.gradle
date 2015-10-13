@@ -1,9 +1,8 @@
 apply plugin: 'java'
+apply plugin: 'maven'
 apply plugin: 'idea'
 
 dependencies {
     compile 'log4j:log4j:1.2.17'
     compile project(':core')
 }
-
-##mainClassName = 'net.petrikainulainen.gradle.client.HelloWorld'
