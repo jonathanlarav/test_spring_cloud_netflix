@@ -3,3 +3,8 @@ target/
 *.iml
 *.ipr
 *.iws
+
+.gradle
+
+/core/build
+/client-one/build
