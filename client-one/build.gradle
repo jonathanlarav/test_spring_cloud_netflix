@@ -12,7 +12,7 @@ apply plugin: 'maven'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
-mainClassName = "com.test.Application"
+mainClassName = "Application"
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8

@@ -1,9 +1,12 @@
 server:
-  port: ${PORT:8761}
+  port: 8761
+
+info:
+  component: Discovery-server
 
 eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
-    server:
-      waitTimeInMsWhenSyncEmpty: 0
+  server:
+    waitTimeInMsWhenSyncEmpty: 0

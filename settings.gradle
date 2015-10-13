@@ -1,2 +1,3 @@
+include 'client-two'
 include 'client-one'
 include 'core'
