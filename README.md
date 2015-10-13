@@ -1,4 +1,3 @@
-# test_spring_cloud_netflix
-Test Spring Cloud Netflix stack integration
+# Spring Cloud Netflix
 
-Run gradle build before import
+Run ```gradle build``` before import
