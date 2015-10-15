@@ -1,3 +1,5 @@
 include 'client-two'
 include 'client-one'
 include 'core'
+include 'config-server'
+
