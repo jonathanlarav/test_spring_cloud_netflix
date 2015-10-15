@@ -20,7 +20,7 @@ public class ClientTwoResource {
     @RequestMapping(value = "/message/renderer")
     public MessageRenderer displayMessage(@RequestParam("msg") String message) {
         System.out.println(message);
-        String url = "http://client-one/message/supplier?" + message;
+        String url = "http://client-one/message/supplier?message=" + message;
         System.out.println(url);
         Message messageObject = restTemplate.getForObject(url, Message.class);
 
