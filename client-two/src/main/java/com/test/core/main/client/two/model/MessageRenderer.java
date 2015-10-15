@@ -5,17 +5,17 @@ package com.test.core.main.client.two.model;
  */
 public class MessageRenderer {
 
-    private String messageTemplate;
+    private Message message;
 
-    public MessageRenderer(String messageTemplate) {
-        this.messageTemplate = messageTemplate;
+    public MessageRenderer(Message message) {
+        this.message = message;
     }
 
-    public String getMessageTemplate() {
-        return messageTemplate;
+    public Message getMessage() {
+        return message;
     }
 
-    public void setMessageTemplate(String messageTemplate) {
-        this.messageTemplate = messageTemplate;
+    public void setMessage(Message message) {
+        this.message = message;
     }
 }

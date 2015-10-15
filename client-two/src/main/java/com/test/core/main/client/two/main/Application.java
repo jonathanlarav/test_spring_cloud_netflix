@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@ComponentScan({"com.test.core.main.client.one"})
+@ComponentScan({"com.test.core.main.client.two"})
 public class Application {
 
     public static void main(String[] args) {

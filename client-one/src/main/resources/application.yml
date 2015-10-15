@@ -1,4 +1,14 @@
+# Spring properties
+spring:
+  application:
+     name: client-one
+
+# Discovery Server Access
 eureka:
   client:
     serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/
+
+# HTTP Server
+server:
+  port: 1111   # HTTP (Tomcat) port
