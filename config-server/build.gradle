@@ -23,7 +23,7 @@ configurations {
 }
 
 dependencies {
-    compile("org.springframework.cloud:spring-cloud-starter-eureka-server:1.0.2.RELEASE")
+    compile("org.springframework.cloud:spring-cloud-starter-eureka-client:1.0.3.RELEASE")
     compile("org.springframework.cloud:spring-cloud-config-server:1.0.2.RELEASE")
 }
 
