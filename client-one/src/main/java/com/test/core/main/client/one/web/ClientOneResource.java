@@ -13,6 +13,6 @@ public class ClientOneResource {
 
     @RequestMapping("/message/supplier")
     public Message home(@RequestParam("message") String message) {
-        return new Message("Hi, this is your message: " + message);
+        return new Message("hi, this is your message: " + message);
     }
 }
