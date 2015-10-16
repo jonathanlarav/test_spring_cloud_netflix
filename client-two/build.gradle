@@ -24,6 +24,7 @@ targetCompatibility = 1.8
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web:1.2.6.RELEASE")
     compile("org.springframework.cloud:spring-cloud-starter-eureka:1.0.3.RELEASE")
+    compile("org.springframework.cloud:spring-cloud-starter-config:1.0.3.RELEASE")
     compile "junit:junit"
 }
 
