@@ -1,15 +1,18 @@
 buildscript {
     repositories {
         mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.6.RELEASE")
+        classpath("se.transmode.gradle:gradle-docker:1.2") // Needed for docker plugin
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
+apply plugin: 'docker'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -23,10 +26,30 @@ configurations {
 }
 
 dependencies {
-    compile("org.springframework.cloud:spring-cloud-starter-eureka-client:1.0.3.RELEASE")
+    compile("org.springframework.cloud:spring-cloud-starter-eureka:1.0.3.RELEASE")
     compile("org.springframework.cloud:spring-cloud-config-server:1.0.2.RELEASE")
 }
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }
+
+// Docker will need the application jar in the docker context
+task copyJarForDockerImage(type: Copy) {
+    from('build/libs')
+    into('build/docker/build')
+    include('*.jar')
+}
+
+// Docker image can be ran with 'docker run -it tscn/config-server'
+group = "tscn"
+task buildDockerImage(type: Docker) {
+    push = false
+    applicationName = "config-server"
+    dockerfile= file('src/main/docker/Dockerfile')
+
+}
+
+// Make sure the build ends with a built docker image
+buildDockerImage.dependsOn(copyJarForDockerImage)
+build.finalizedBy(buildDockerImage)
