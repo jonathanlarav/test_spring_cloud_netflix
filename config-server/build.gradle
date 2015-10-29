@@ -33,7 +33,7 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
 }
-
+/*
 // Docker will need the application jar in the docker context
 task copyJarForDockerImage(type: Copy) {
     from('build/libs')
@@ -53,3 +53,4 @@ task buildDockerImage(type: Docker) {
 // Make sure the build ends with a built docker image
 buildDockerImage.dependsOn(copyJarForDockerImage)
 build.finalizedBy(buildDockerImage)
+*/

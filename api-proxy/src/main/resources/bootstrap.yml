@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: api-proxy
+zuul:
+  routes:
+    first-client:
+      path: /first-client/**
+      stripPrefix: false
+      url: http://client-one:9000
+    second-client:
+      path: /second-client/**
+      stripPrefix: false
+      url: http://client-two:9000
